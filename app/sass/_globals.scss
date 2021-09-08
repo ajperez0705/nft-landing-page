@@ -1,21 +1,72 @@
-// 
+//
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: none;
+  overflow-x: hidden;
+  // border: 1px solid red;
 }
 
-h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold 700;
+h1,
+h2,
+h3,
+h4,
+a,
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold 700;
 }
 
 h1 {
-    font-size: 60px;
+  font-size: 60px;
 }
 
 .wrapper {
-    padding: 8px 24px;
+  padding: 8px 24px;
+
+  @include breakpoint-up(medium) {
+    padding: 0 16px;
+  }
+
+  @include breakpoint-up(large) {
+    padding: 0 60px;
+  }
 }
 
+.primary-btn {
+  padding: 20px 24px;
+  border-radius: 20px;
+  font-size: 20px;
+  border: none;
+  color: white;
+  background-color: $primaryBlue;
+  box-shadow: 0px 5px 9px 3px $primaryBlue;
+  margin: 16px;
+
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+.secondary-btn {
+  padding: 20px 24px;
+
+  border-radius: 20px;
+  font-size: 20px;
+  border: none;
+  color: white;
+  background-color: $secondaryBlue;
+  box-shadow: 0px 5px 9px 3px $secondaryBlue;
+  margin: 16px;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

@@ -1,0 +1,81 @@
+.hero {
+  margin: 8px 0;
+
+  &__content {
+    @include breakpoint-up(medium) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-content: center;
+    }
+  }
+
+  &__content-image {
+    padding: 48px 0;
+    position: relative;
+    background-image: url(/images/hero-blob.svg);
+    background-position: center center;
+    background-size: 105%;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: auto;
+
+    @include breakpoint-up(medium) {
+      //   position: relative;
+      padding: 100px 0;
+      order: 2;
+      flex: 1.5;
+      z-index: 80;
+    }
+
+    &::before {
+      content: "";
+      z-index: 5;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: -15%;
+      background-image: url(/images/computer-kid.svg);
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @include breakpoint-up(medium) {
+        // position: relative;
+        order: 2;
+        flex: 1;
+      }
+    }
+  }
+
+  &__content-text {
+    padding: 40px 60px;
+    text-align: left;
+
+    @include breakpoint-up(medium) {
+      order: 1;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      //   align-items: center;
+
+      .hero-cta {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+    }
+
+    & h1 {
+      font-size: 48px;
+      padding-bottom: 8px;
+      text-transform: capitalize;
+    }
+
+    & p {
+      padding-bottom: 24px;
+    }
+  }
+}

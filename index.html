@@ -1,41 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/app/sass/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/app/sass/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Nftify</title>
-</head>
-<body>
-    <header class="header">
-            <div class="wrapper">
-            <div class="header__nav-bar">
-                <h1 class="header__nav-bar--logo">Nftify</h1>
-                <!-- Mobile Overlay -->
-                <div class="overlay"></div>
-                <!-- mobile btn -->
-                <a href="#" class="header__nav-bar--mobile-btn"><i class="fas fa-bars"></i></a>
-            </div>
+  </head>
+  <body>
+    <header class="wrapper header">
+      <div class="header__nav-bar">
+        <h1 class="header__nav-bar--logo">Nftify</h1>
+        <div class="header__desktop">
+          <div class="header__desktop-content">
+            <a href="#">About</a>
+            <a href="#">Marketplace</a>
+            <a href="#">Activity</a>
+            <a href="#">Community</a>
+            <button class="secondary-btn">Sign Up</button>
+          </div>
+        </div>
+        <!-- mobile btn -->
+        <button href="#" class="mobile-btn">
+          <div class="bar"></div>
+        </button>
+      </div>
+
+      <!-- mobile-menu -->
+      <div class="header__mobile-menu">
+        <div class="header__mobile-menu--content">
+          <div class="header__mobile-menu--content-title">
+            <h4>Hello, John</h4>
+            <h3>Profile Image Here</h3>
+          </div>
+          <ul class="header__mobile-menu--nav-links">
+            <li><a href="">About</a></li>
+            <li><a href="">Marketplace</a></li>
+            <li><a href="">Activity</a></li>
+            <li><a href="">Community</a></li>
+          </ul>
+          <a class="header__mobile-menu--logout" href="#">Logout</a>
+        </div>
+      </div>
+      <!-- <div class="overlay"></div> -->
+    </header>
+
+    <section class="hero">
+      <div class="hero__content">
+        <!-- <div class="wrapper"> -->
+        <div class="wrapper hero__content-text">
+          <h1>A new World With New Mysteries</h1>
+          <p>
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum is that it has a more-or-less normal
+            distribution of letters, as opposed to using 'Content here, content
+            here', making it look like readable English.
+          </p>
+          <div class="hero-cta">
+            <button class="primary-btn">Sign Up</button>
+            <button class="secondary-btn">Sign Up</button>
+          </div>
+        </div>
+        <!-- </div> -->
+        <div class="hero__content-image"></div>
+      </div>
+    </section>
+
+    <section class="wrapper products">
+      <h2 class="wrapper">A new World With New Mysteries</h2>
+      <div class="products__list">
+        <div class="products__list-card">
+          <img src="/images/nft-vr-wand.svg" alt="" />
+          <div class="products__list-card--text">
+            <h3>Controller</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+              placeat corporis soluta, maiores minima reiciendis impedit,
+              pariatur minus.
+            </p>
+          </div>
+          <button class="primary-btn">Buy Now</button>
         </div>
 
-            <!-- mobile-menu -->
-            <div class="header__mobile-menu">
-                <h4>Hello, John</h4>
-                <h3>Profile Image Here</h3>
-                <ul class="header__mobile-menu--nav-links">
-                    <li><a href="">About</a></li>
-                    <li><a href="">Marketplace</a></li>
-                    <li><a href="">Activity</a></li>
-                    <li><a href="">Community</a></li>
-                </ul>
-                <a class="header__mobile-menu--logout" href="#">Logout</a>
-            </div>
-        </header>
-      
-</body>
+        <div class="products__list-card">
+          <img src="/images/nft-vr-wand.svg" alt="" />
+          <div class="products__list-card--text">
+            <h3>Controller</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+              placeat corporis soluta, maiores minima reiciendis impedit,
+              pariatur minus.
+            </p>
+          </div>
+          <button class="primary-btn">Buy Now</button>
+        </div>
+
+        <div class="products__list-card">
+          <img src="/images/nft-vr-wand.svg" alt="" />
+          <div class="products__list-card--text">
+            <h3>Controller</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+              placeat corporis soluta, maiores minima reiciendis impedit,
+              pariatur minus.
+            </p>
+          </div>
+          <button class="primary-btn">Buy Now</button>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="/app//js/main.js"></script>
 </html>

@@ -1,57 +1,164 @@
 .header {
-    position: relative;
-    &__nav-bar {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        
-        &--logo {
-            font-size: 48px;
-    }
-    
-    & .overlay {
-        // display: none;
-        position: absolute;
-        top: 12%;
-        left: 0;
-        background: rgba(174, 68, 235, 0.5);
-        width: 100%;
-        height: 90%;
-    }
-    
-    &--mobile-btn {
-        color: black;
-        font-size: 24px;
-    }
-}
+  position: relative;
+  &__nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 4px 0;
 
-&__mobile-menu {
-    // display: none;
+    @include breakpoint-up(medium) {
+      height: auto;
+      padding: 24px 0;
+      z-index: 5;
+      background-color: transparent;
+    }
+
+    &--logo {
+      font-size: 48px;
+    }
+
+    // Mobile Btn Styling
+    .mobile-btn {
+      position: relative;
+      display: block;
+      width: 35px;
+      height: 40px;
+      cursor: pointer;
+      appearance: none;
+      background: none;
+      outline: none;
+      border: none;
+
+      @include breakpoint-up(medium) {
+        display: none;
+      }
+    }
+
+    .mobile-btn .bar,
+    .mobile-btn::after,
+    .mobile-btn::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 5px;
+      background-color: black;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+
+    .mobile-btn.active .bar {
+      opacity: 0;
+    }
+
+    .mobile-btn.active::before {
+      transform: rotate(-45deg) translate(-8px, 6px);
+    }
+
+    .mobile-btn.active::after {
+      transform: rotate(45deg) translate(-9px, -8px);
+    }
+  }
+  // End of Mobile btn styling
+
+  // Mobile Menu Styles
+  &__mobile-menu {
+    z-index: 90;
+    position: fixed;
+    left: 120%;
+    top: 10%;
+    transition: 0.4s ease-in-out;
+
+    display: block;
     color: white;
     width: 50%;
     background: $primaryGradient;
     height: 79vh;
     padding: 30px 0 30px 30px;
-    border-radius: 20px 0 0 20px; 
-    transform: translateX(71%);
-    
-    
-    &--nav-links {
-        list-style: none;
-        
-        & a {
-            text-decoration: none;
-    color: white;
+    border-radius: 20px 0 0 20px;
+    // transform: translateX(200px);
+    // Is this the proper use of position relative here?
+    // position: relative;
 
-    &:not(last-child()){
-            padding-bottom: 8px;
-        }
+    &.active {
+      left: 50%;
     }
 
-    
-}
-    
-}
-    
+    .header__mobile-menu--content {
+      width: 70%;
+
+      .header__mobile-menu--content-title {
+        margin-bottom: 48px;
+      }
+    }
+
+    .header__mobile-menu--nav-links {
+      list-style: none;
+      position: relative;
+
+      li:not(:last-child) {
+        padding-bottom: 24px;
+      }
+
+      & a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+
+    .header__mobile-menu--logout {
+      position: absolute;
+      bottom: 5%;
+
+      text-decoration: none;
+      color: white;
+      opacity: 0.6;
+    }
+  }
+
+  .overlay {
+    // display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+    &.active {
+      display: block;
+      position: absolute;
+      opacity: 1;
+      top: 9.5%;
+      left: 0;
+      background: rgba(129, 35, 184, 0.26);
+      width: 100%;
+      height: 90%;
+    }
+  }
+
+  &__desktop {
+    display: none;
+
+    @include breakpoint-up(medium) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      font-size: 24px;
+
+      &-content {
+        padding: 24px 16px;
+      }
+    }
+
+    & a {
+      text-decoration: none;
+      color: black;
+
+      &:not(:last-child) {
+        padding-right: 10px;
+
+        @include breakpoint-up(large) {
+          padding-right: 20px;
+        }
+      }
+    }
+  }
 }
