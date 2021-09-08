@@ -1,0 +1,57 @@
+.header {
+    position: relative;
+    &__nav-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+        &--logo {
+            font-size: 48px;
+    }
+    
+    & .overlay {
+        // display: none;
+        position: absolute;
+        top: 12%;
+        left: 0;
+        background: rgba(174, 68, 235, 0.5);
+        width: 100%;
+        height: 90%;
+    }
+    
+    &--mobile-btn {
+        color: black;
+        font-size: 24px;
+    }
+}
+
+&__mobile-menu {
+    // display: none;
+    color: white;
+    width: 50%;
+    background: $primaryGradient;
+    height: 79vh;
+    padding: 30px 0 30px 30px;
+    border-radius: 20px 0 0 20px; 
+    transform: translateX(71%);
+    
+    
+    &--nav-links {
+        list-style: none;
+        
+        & a {
+            text-decoration: none;
+    color: white;
+
+    &:not(last-child()){
+            padding-bottom: 8px;
+        }
+    }
+
+    
+}
+    
+}
+    
+}
