@@ -11,7 +11,7 @@
     @include breakpoint-up(medium) {
       height: auto;
       padding: 24px 0;
-      z-index: 5;
+      z-index: 4;
       background-color: transparent;
     }
 
@@ -32,6 +32,10 @@
       border: none;
 
       @include breakpoint-up(medium) {
+        margin-right: 16px;
+      }
+
+      @include breakpoint-up(large) {
         display: none;
       }
     }
@@ -138,10 +142,22 @@
     display: none;
 
     @include breakpoint-up(medium) {
+      // display: flex;
+      // align-items: center;
+      // justify-content: flex-end;
+      // font-size: 18px;
+
+      &-content {
+        padding: 24px 16px;
+      }
+    }
+
+    @include breakpoint-up(large) {
+      z-index: 6;
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      font-size: 24px;
+      font-size: 22px;
 
       &-content {
         padding: 24px 16px;
@@ -150,7 +166,7 @@
 
     & a {
       text-decoration: none;
-      color: black;
+      color: white;
 
       &:not(:last-child) {
         padding-right: 10px;

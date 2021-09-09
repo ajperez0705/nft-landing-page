@@ -1,9 +1,30 @@
 .informationTwo {
   margin: 8px 0;
+  position: relative;
 
-  @include breakpoint-up(large) {
-    min-height: 100vh;
-  }
+  // NFT Planet
+  // &::after {
+  //   content: "";
+  //   display: inline-block;
+  //   z-index: 2;
+  //   position: absolute;
+  //   background-image: url(/images/nft-planet.svg);
+  //   background-repeat: no-repeat;
+  //   background-size: 47%;
+  //   left: -244px;
+  //   bottom: -323px;
+  //   background-position: center center;
+  //   height: 100%;
+  //   width: 100%;
+  // }
+
+  // @include breakpoint-up(medium) {
+  //   min-height: 85vh;
+  // }
+
+  // @include breakpoint-up(large) {
+  //   min-height: 100vh;
+  // }
 
   &__content {
     @include breakpoint-up(medium) {

@@ -1,47 +1,139 @@
 .final-cta {
   position: relative;
-  margin: 40px 24px;
-  padding: 48px 40px;
-  border-radius: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-content: center;
-  align-items: center;
-  background: $formGradient;
+  padding: 190px 0;
+  width: 100%;
 
-  &::after {
-    content: "";
-    position: absolute;
-    background-image: url(/images/bored-signup.svg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center center;
-    height: 80%;
-    width: 100%;
+  @include breakpoint-up(large) {
+    padding: 240px 0;
   }
-
-  & h3 {
-    color: white;
-    text-align: center;
-  }
-
-  &__form {
+  &__content {
+    margin: 40px 24px;
+    padding: 48px 40px;
+    border-radius: 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-content: center;
-    margin: 20px 0;
-    width: 80%;
+    align-items: center;
+    background: $formGradient;
+    z-index: 1;
 
-    & input {
-      padding: 16px 20px;
-      border-radius: 30px;
-      border: none;
+    @include breakpoint-up(medium) {
+      flex-direction: row;
+      margin: 20px 40px;
     }
 
-    input:not(:last-child) {
-      margin-bottom: 10px;
+    @include breakpoint-up(medium) {
+      flex-direction: row;
+      margin: 20px 60px;
+    }
+
+    // &::after {
+    //   display: none;
+
+    //   @include breakpoint-up(medium) {
+    //     content: "";
+    //     display: inline-block;
+    //     z-index: 2;
+    //     position: absolute;
+    //     background-image: url(/images/bored-signup.svg);
+    //     background-repeat: no-repeat;
+    //     background-size: 47%;
+    //     right: 272px;
+    //     top: 30px;
+    //     background-position: center center;
+    //     height: 100%;
+    //     width: 100%;
+    //   }
+
+    //   @include breakpoint-up(large) {
+    //     content: "";
+    //     display: inline-block;
+    //     z-index: 2;
+    //     position: absolute;
+    //     background-image: url(/images/bored-signup.svg);
+    //     background-repeat: no-repeat;
+    //     background-size: 47%;
+    //     right: 272px;
+    //     top: 30px;
+    //     background-position: center center;
+    //     height: 100%;
+    //     width: 100%;
+    //   }
+    // }
+
+    & h3 {
+      color: white;
+      text-align: center;
+    }
+
+    &-form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-content: center;
+      align-items: center;
+      margin: 20px 0;
+      width: 100%;
+      z-index: 3;
+
+      @include breakpoint-up(medium) {
+        width: 40%;
+      }
+
+      @include breakpoint-up(large) {
+        width: 50%;
+      }
+      & h3 {
+        padding-bottom: 16px;
+      }
+
+      & input {
+        padding: 16px 20px;
+        border-radius: 30px;
+        border: none;
+
+        @include breakpoint-up(large) {
+          width: 50%;
+        }
+      }
+
+      & button {
+        @include breakpoint-up(large) {
+          width: 30%;
+        }
+      }
+
+      input:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &-image {
+      display: none;
+
+      @include breakpoint-up(medium) {
+        display: inline-block;
+        position: absolute;
+        background-image: url(/images/bored-signup.svg);
+        background-position: center center;
+        background-size: 75%;
+        left: 204px;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+      }
+      @include breakpoint-up(large) {
+        display: inline-block;
+        position: absolute;
+        background-image: url(/images/bored-signup.svg);
+        background-position: center center;
+        background-size: 70%;
+        left: 319px;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+      }
     }
   }
 }

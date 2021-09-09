@@ -8,6 +8,20 @@
   // border: 1px solid red;
 }
 
+body {
+  background: url(/images/bg-pattern-2.svg);
+  background-position: center center;
+  background-size: 186%;
+
+  @include breakpoint-up(medium) {
+    background-size: 120%;
+  }
+
+  @include breakpoint-up(large) {
+    background-size: 105%;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -20,6 +34,12 @@ button {
 
 h1 {
   font-size: 60px;
+}
+
+p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
 }
 
 .wrapper {

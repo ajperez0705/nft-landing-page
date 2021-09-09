@@ -1,0 +1,82 @@
+.footer {
+  &__content {
+    padding: 48px 40px;
+    border-radius: 50px 50px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // align-content: center;
+    align-items: center;
+    background: $formGradient;
+    z-index: 1;
+    text-align: center;
+    color: white;
+
+    @include breakpoint-up(large) {
+      padding: 48px 54px;
+      //   align-items: flex-start;
+      flex-direction: row;
+      text-align: left;
+    }
+
+    &-title {
+      padding-bottom: 36px;
+      //   width: 80%;
+
+      @include breakpoint-up(medium) {
+        width: 60%;
+        flex-grow: 33%;
+      }
+
+      @include breakpoint-up(large) {
+        width: 33%;
+        flex-grow: 33%;
+      }
+    }
+
+    &-nav {
+      h3 {
+        padding-bottom: 8px;
+      }
+
+      & li a {
+        text-decoration: none;
+        color: rgb(252, 252, 252);
+      }
+      li:not(:last-child) {
+        padding-bottom: 8px;
+      }
+      &--one {
+        padding-bottom: 36px;
+
+        @include breakpoint-up(large) {
+          padding-bottom: 0;
+
+          flex-grow: 33%;
+        }
+      }
+
+      &--two {
+        @include breakpoint-up(large) {
+          flex-grow: 33%;
+        }
+      }
+    }
+
+    &-socials {
+      padding: 30px 0;
+
+      a:not(:last-child) {
+        padding-right: 8px;
+      }
+      & a {
+        color: white;
+        font-size: 30px;
+      }
+
+      @include breakpoint-up(large) {
+        flex-grow: 0;
+      }
+    }
+  }
+}
