@@ -1,0 +1,47 @@
+.final-cta {
+  position: relative;
+  margin: 40px 24px;
+  padding: 48px 40px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  background: $formGradient;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url(/images/bored-signup.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    height: 80%;
+    width: 100%;
+  }
+
+  & h3 {
+    color: white;
+    text-align: center;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    margin: 20px 0;
+    width: 80%;
+
+    & input {
+      padding: 16px 20px;
+      border-radius: 30px;
+      border: none;
+    }
+
+    input:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}

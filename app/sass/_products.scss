@@ -1,14 +1,19 @@
 .products {
   text-align: center;
   background-image: url(/images/vibin-kid.svg);
-  background-position: left 12% top 28%;
-  background-size: 210%;
+  background-position: left 7% top 33%;
+  background-size: 143%;
   background-repeat: no-repeat;
   padding: 60px 0;
 
+  @include breakpoint-up(medium) {
+    background-position: right -59% bottom 5%;
+    background-size: 85%;
+  }
+
   @include breakpoint-up(large) {
-    background-position: right -40% top 2%;
-    background-size: 79%;
+    background-position: right 12% bottom 5%;
+    background-size: 55%;
   }
 
   & h2 {
