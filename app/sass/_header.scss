@@ -1,5 +1,9 @@
 .header {
   position: relative;
+
+  @include breakpoint-up(large) {
+    top: 1px;
+  }
   &__nav-bar {
     display: flex;
     flex-direction: row;
@@ -102,12 +106,13 @@
       position: relative;
 
       li:not(:last-child) {
-        padding-bottom: 24px;
+        padding-bottom: 40px;
       }
 
       & a {
         text-decoration: none;
         color: white;
+        font-size: 24px;
       }
     }
 
@@ -128,9 +133,9 @@
 
     &.active {
       display: block;
-      position: absolute;
+      position: fixed;
       opacity: 1;
-      top: 9.5%;
+      top: 10%;
       left: 0;
       background: rgba(129, 35, 184, 0.26);
       width: 100%;
@@ -167,12 +172,33 @@
     & a {
       text-decoration: none;
       color: white;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        bottom: -20px;
+        left: 0;
+        right: 0px;
+        height: 5px;
+        /* width: 90%; */
+        background: $primaryGradient;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+      &:hover {
+        &::after {
+          opacity: 1;
+        }
+      }
 
       &:not(:last-child) {
-        padding-right: 10px;
-
-        @include breakpoint-up(large) {
-          padding-right: 20px;
+        margin-right: 10px;
+      }
+      @include breakpoint-up(large) {
+        &:not(:last-child) {
+          margin-right: 20px;
         }
       }
     }

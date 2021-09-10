@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: none;
-  overflow-x: hidden;
   // border: 1px solid red;
 }
 
@@ -12,6 +11,7 @@ body {
   background: url(/images/bg-pattern-2.svg);
   background-position: center center;
   background-size: 186%;
+  overflow-x: hidden !important;
 
   @include breakpoint-up(medium) {
     background-size: 120%;
@@ -20,6 +20,11 @@ body {
   @include breakpoint-up(large) {
     background-size: 105%;
   }
+}
+
+html {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 h1,
@@ -51,6 +56,16 @@ p {
 
   @include breakpoint-up(large) {
     padding: 0 60px;
+  }
+}
+
+.logo-span {
+  color: $primaryBlue;
+
+  &--footer {
+    color: #3c24d0;
+
+    // color: $secondaryBlue;
   }
 }
 

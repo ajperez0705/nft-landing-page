@@ -49,8 +49,8 @@
       border-radius: 40px;
       cursor: pointer;
       opacity: 0.5;
-      transition: opacity 0.3s ease-in-out;
-      transition: box-shadow 0.3s ease-in-out;
+      transition: opacity 0.4s ease-in-out;
+      transition: box-shadow 0.4s ease-in-out;
 
       @include breakpoint-up(medium) {
         margin: 40px 16px;

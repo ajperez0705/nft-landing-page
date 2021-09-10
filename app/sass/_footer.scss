@@ -39,9 +39,19 @@
         padding-bottom: 8px;
       }
 
+      & li {
+        list-style: none;
+      }
+
       & li a {
         text-decoration: none;
-        color: rgb(252, 252, 252);
+        color: white;
+        position: relative;
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+        &:hover {
+          opacity: 0.5;
+        }
       }
       li:not(:last-child) {
         padding-bottom: 8px;
