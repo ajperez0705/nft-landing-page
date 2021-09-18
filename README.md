@@ -27,9 +27,10 @@ Here is a link to view the design files within Figma: [NFTify Design Files](http
 
 ## Features
 
-Desktop Hero: ![](/readme-images/nftify-screenshot-1.png)
+Desktop Hero: 
+![](/readme-images/nftify-screenshot-2.png)
 
-Mobile Section: ![](/readme-images/nftify-screenshot-2.png)
-  
+Mobile Section: 
+![](/readme-images/nftify-screenshot-1.png)
 
 ## Contact
