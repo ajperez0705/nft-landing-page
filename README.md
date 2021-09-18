@@ -20,6 +20,7 @@ Looking back on my path into Front-End Web Development, I too quickly glossed ov
 Before touching code, I like to make use of a moodboard and design program like Adobe XD to plan my attack.
 
 Here is a link to view the moodboard: [NFTify Moodboard](https://dribbble.com/ajperez0705/collections/5085128-Landing-Page?utm_source=Clipboard)
+Here a screenshot of the moodboard: ![](/readme-images/nftify-moodboard.png)
 
 Here is a link to view the design files within Figma: [NFTify Design Files](https://www.figma.com/file/f66j584itXtRjJbO7Q55LI/NFTify-Design-File)
 
