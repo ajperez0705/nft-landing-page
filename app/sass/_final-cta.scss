@@ -28,40 +28,6 @@
       margin: 20px 60px;
     }
 
-    // &::after {
-    //   display: none;
-
-    //   @include breakpoint-up(medium) {
-    //     content: "";
-    //     display: inline-block;
-    //     z-index: 2;
-    //     position: absolute;
-    //     background-image: url(/images/bored-signup.svg);
-    //     background-repeat: no-repeat;
-    //     background-size: 47%;
-    //     right: 272px;
-    //     top: 30px;
-    //     background-position: center center;
-    //     height: 100%;
-    //     width: 100%;
-    //   }
-
-    //   @include breakpoint-up(large) {
-    //     content: "";
-    //     display: inline-block;
-    //     z-index: 2;
-    //     position: absolute;
-    //     background-image: url(/images/bored-signup.svg);
-    //     background-repeat: no-repeat;
-    //     background-size: 47%;
-    //     right: 272px;
-    //     top: 30px;
-    //     background-position: center center;
-    //     height: 100%;
-    //     width: 100%;
-    //   }
-    // }
-
     & h3 {
       color: white;
       text-align: center;
